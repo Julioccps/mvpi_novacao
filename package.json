@@ -6,18 +6,16 @@
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-    },
+    "build": "next build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out"
+  },
   "dependencies": {
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-    
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
